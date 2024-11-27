@@ -14,6 +14,7 @@
   "author": "cyril Plou",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.8",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "eslint": "^9.15.0",
