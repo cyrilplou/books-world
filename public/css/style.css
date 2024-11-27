@@ -1,0 +1,22 @@
+.containerFiches{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.fiche{
+    width: 200px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 2rem;
+}
+.description{
+    font-size: 1rem;
+    max-height: 200px;
+    overflow: hidden;
+    text-align: justify;
+    font-weight: 400;
+}

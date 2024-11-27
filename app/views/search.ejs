@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-        <a href="/">retour</a>
-        <% for(let i=0; i< books.length;i++) {%>
-            
-            <h1><%= books[i].volumeInfo.title %></h1>
-            <h2><%= books[i].volumeInfo.author%></h2>
-            <h2><%= books[i].volumeInfo.description %></h2>
-            <% if (books[i].volumeInfo.industryIdentifiers && books[i].volumeInfo.industryIdentifiers[0].identifier){  %>
-                <h2><%= books[i].volumeInfo.industryIdentifiers[0].identifier %></h2>
-                <% } else{ %>
-                    <p>Pas d'isbn</p>
-                    <% } %>
+<%- include('./partials/header') %>
 
+<body>
+
+
+    <section class="containerFiches">
+        <% for(let i=0; i< books.length;i++) {%>
+            <div class="fiche">
             <% if(books[i].volumeInfo.imageLinks && books[i].volumeInfo.imageLinks.thumbnail){ %>
-            <img src="<%= books[i].volumeInfo.imageLinks.thumbnail %>" alt="Book Thumbnail">
-                <% } else{ %>
-                    <p>Pas d'image disponible</p>
-                    <% } %>
+                <img class="img" src="<%= books[i].volumeInfo.imageLinks.thumbnail %>" alt="Book Thumbnail">
+                    <% } else{ %>
+                        <p>Pas d'image disponible</p>
+                        <% } %>
+            <h2 class="titre"><%= books[i].volumeInfo.title %></h1>
+            <p class="auteur"><%= books[i].volumeInfo.author%></p>
+            <h2 class="description"><%= books[i].volumeInfo.description %></h2>
+         
+
+          
+                </div>
 
             <%  }; %>
+    </section>
+        
 </body>
-</html>
+
