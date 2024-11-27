@@ -1,0 +1,23 @@
+{
+  "name": "books-world",
+  "version": "1.0.0",
+  "description": "A web application about books",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "cyril Plou",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "eslint": "^9.15.0",
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
+  }
+}
