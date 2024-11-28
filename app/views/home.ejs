@@ -1,11 +1,33 @@
 
 <%- include('./partials/header') %>
 <body>
-    <form action="/search" method="get">
-        <input type="text" name="title" id="title" placeholder="Titre du livre">
-        <input type="text" name="author" id="author" placeholder="Auteur">
-        <button>Valider</button>
-    </form>
     
+        <section class="main">
+            <img src="images/librairie.png" alt="">
+            <form action="/search" method="get">
+                <input type="text" name="title" id="title" placeholder="Titre du livre">
+                <input type="text" name="author" id="author" placeholder="Auteur">
+                <button>Valider</button>
+            </form>
+        </section>
+        <section class="containerFiches">
+            <% for(let i=0; i< books.length;i++) {%>
+                <div class="fiche">
+                <% if(books[i].volumeInfo.imageLinks && books[i].volumeInfo.imageLinks.thumbnail){ %>
+                    <img class="img" src="<%= books[i].volumeInfo.imageLinks.thumbnail %>" alt="Book Thumbnail">
+                        <% } else{ %>
+                            <p>Pas d'image disponible</p>
+                            <% } %>
+                <h2 class="titre"><%= books[i].volumeInfo.title %></h1>
+                <p class="auteur"><%= books[i].volumeInfo.author%></p>
+                <h2 class="description"><%= books[i].volumeInfo.description %></h2>
+                <p class="auteur"><%= books[i].volumeInfo.categories%></p>
+    
+    
+              
+                    </div>
+    
+                <%  }; %>
+        </section>
 </body>
 </html>

@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1rem 2rem;
+    margin: 3rem 2rem;
 }
 .description{
     font-size: 1rem;
@@ -19,4 +19,35 @@
     overflow: hidden;
     text-align: justify;
     font-weight: 400;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgb(255, 250, 244);
+}
+.main img{
+    max-height: 80vh;
+}
+.main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.main form input {
+    width: 200px;
+    height: 2rem;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+button{
+    width: 100px;
+    height: 1.5rem;
+    border-radius: 10px;
+    border: solid 1px black;
 }
