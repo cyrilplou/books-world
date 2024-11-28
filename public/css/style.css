@@ -1,8 +1,46 @@
+
+body{
+    margin: 0px 0px;
+    width: auto;
+}
+
+ /* CSS DU HEADER */
+header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.594);
+}
+header h1{
+    margin-left: 2rem;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3rem;
+    gap: 1rem;
+}
+header nav ul a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(87, 153, 12);
+}
+header nav ul a:hover{
+    color: rgb(42, 140, 107);
+}
+
+/* CSS de la HomePage */
+
 .containerFiches{
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .fiche{
     width: 200px;
@@ -12,6 +50,16 @@
     align-items: center;
     text-align: center;
     margin: 3rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: solid 1.5px rgb(52, 132, 46);
+    background-color: antiquewhite;
+    overflow-y: hidden;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
+
+}
+.fiche img{
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
 }
 .description{
     font-size: 1rem;
@@ -21,22 +69,24 @@
     font-weight: 400;
 }
 .main{
-    width: 100vw;
     height: 100vh;
     display: flex;
+    overflow: hidden;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
-    background-color: rgb(255, 250, 244);
+    background-image: url('/images/librairie_vierge.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 249, 240);
 }
-.main img{
-    max-height: 80vh;
-}
+
 .main form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 50rem;
     gap: 1rem;
 }
 .main form input {
@@ -50,4 +100,19 @@ button{
     height: 1.5rem;
     border-radius: 10px;
     border: solid 1px black;
+}
+.titleLibrairy{
+    position: absolute;
+    text-align: center;
+    height: 3rem;
+    left: 400px;
+    top: 140px;
+}
+
+.titleLibrairy h1{
+    font-size: 3em;
+    color: white;
+    filter: drop-shadow(-3px 3px black);
+    transform: perspective(2cm) rotateX(4deg) rotateY(2deg) rotateZ(4deg);
+
 }

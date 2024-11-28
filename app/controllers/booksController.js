@@ -73,7 +73,7 @@ export const booksController = {
         const books = results.filter((book)=>book.volumeInfo.imageLinks !== undefined)
 
         // J'envoie ma page ainsi que le résultat de ma requête.
-        res.render('search', {books})
+        res.render('home', {books})
         console.log(books)
 
     },

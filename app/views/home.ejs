@@ -3,14 +3,20 @@
 <body>
     
         <section class="main">
-            <img src="images/librairie.png" alt="">
+
+            <div class="titleLibrairy">
+                    <h1 >La croisée</h1>
+            </div>
             <form action="/search" method="get">
                 <input type="text" name="title" id="title" placeholder="Titre du livre">
                 <input type="text" name="author" id="author" placeholder="Auteur">
-                <button>Valider</button>
+                <button id="searchBTN">Valider</button>
             </form>
         </section>
-        <section class="containerFiches">
+        <% if(!books){ %>
+            <h1>y'a rien</h1>
+            <% }else { %>
+        <section class="containerFiches" id="containerFiches">
             <% for(let i=0; i< books.length;i++) {%>
                 <div class="fiche">
                 <% if(books[i].volumeInfo.imageLinks && books[i].volumeInfo.imageLinks.thumbnail){ %>
@@ -18,7 +24,7 @@
                         <% } else{ %>
                             <p>Pas d'image disponible</p>
                             <% } %>
-                <h2 class="titre"><%= books[i].volumeInfo.title %></h1>
+                <h3 class="titre"><%= books[i].volumeInfo.title %></h3>
                 <p class="auteur"><%= books[i].volumeInfo.author%></p>
                 <h2 class="description"><%= books[i].volumeInfo.description %></h2>
                 <p class="auteur"><%= books[i].volumeInfo.categories%></p>
@@ -29,5 +35,13 @@
     
                 <%  }; %>
         </section>
+        <% } %>
+        <script>
+            const formBTN = document.getElementById('searchBTN');
+            formBTN.addEventListener('click',()=>{
+                const target = document.getElementById('containerFiches');
+                target.scrollIntoView({ behavior: 'smooth' });
+            })
+        </script>
 </body>
 </html>
