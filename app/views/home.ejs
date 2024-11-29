@@ -5,43 +5,33 @@
         <section class="main">
 
             <div class="titleLibrairy">
-                    <h1 >La croisée</h1>
+                    <h2 >La croisée</h2>
             </div>
-            <form action="/search" method="get">
+            <div class="accroche">
+                <h3>La croisée, créez votre propre Univers de livres.</h3>
+                <button class="btnsubscribe">M'inscrire</button>
+                <button class="btnlogin">Me connecter</button>
+                <div class="controllerScrollIcon">
+                      <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                          <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                      </span>
+                      <h4>Scrollez,<br><span style="font-size: 1.3rem; ">pour explorer !</span></h4>
+            </div>
+        </section>
+         <!-- <form action="/search" method="get">
                 <input type="text" name="title" id="title" placeholder="Titre du livre">
                 <input type="text" name="author" id="author" placeholder="Auteur">
                 <button id="searchBTN">Valider</button>
-            </form>
-        </section>
-        <% if(!books){ %>
-            <h1>y'a rien</h1>
-            <% }else { %>
-        <section class="containerFiches" id="containerFiches">
-            <% for(let i=0; i< books.length;i++) {%>
-                <div class="fiche">
-                <% if(books[i].volumeInfo.imageLinks && books[i].volumeInfo.imageLinks.thumbnail){ %>
-                    <img class="img" src="<%= books[i].volumeInfo.imageLinks.thumbnail %>" alt="Book Thumbnail">
-                        <% } else{ %>
-                            <p>Pas d'image disponible</p>
-                            <% } %>
-                <h3 class="titre"><%= books[i].volumeInfo.title %></h3>
-                <p class="auteur"><%= books[i].volumeInfo.author%></p>
-                <h2 class="description"><%= books[i].volumeInfo.description %></h2>
-                <p class="auteur"><%= books[i].volumeInfo.categories%></p>
-    
-    
-              
-                    </div>
-    
-                <%  }; %>
-        </section>
-        <% } %>
-        <script>
-            const formBTN = document.getElementById('searchBTN');
-            formBTN.addEventListener('click',()=>{
-                const target = document.getElementById('containerFiches');
-                target.scrollIntoView({ behavior: 'smooth' });
-            })
-        </script>
+            </form> -->
+
+            <section class="exploreOne">
+                    <h2>test</h2>
+            </section>
+            <section class="exploreTwo">
+                
+            </section>
+     
 </body>
 </html>

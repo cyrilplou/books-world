@@ -27,7 +27,7 @@ header nav ul a {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2rem;
-    color: rgb(87, 153, 12);
+    color: rgb(81, 154, 138);
 }
 header nav ul a:hover{
     color: rgb(42, 140, 107);
@@ -109,10 +109,154 @@ button{
     top: 140px;
 }
 
-.titleLibrairy h1{
+.titleLibrairy h2{
     font-size: 3em;
     color: white;
     filter: drop-shadow(-3px 3px black);
     transform: perspective(2cm) rotateX(4deg) rotateY(2deg) rotateZ(4deg);
 
 }
+.accroche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 8rem;
+    margin-left: 50rem;
+
+}
+.accroche h3{
+    color:rgb(81, 154, 138);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.accroche h4{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(81, 154, 138);
+    margin-top: 1rem;
+    line-height: 65%;
+    
+}
+@keyframes fadeScroll {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+
+}
+.btnlogin{
+    background-color: rgb(81, 154, 138);
+    width: 150px;
+    height: 2rem;
+    color: white;
+    font-weight: 600;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.491);
+    transition: 500ms;
+    cursor: pointer;
+    margin-bottom: -3rem;
+
+}
+.btnlogin:hover{
+    transition: 500ms;
+    scale: 1.1;
+}
+.btnsubscribe{
+    background-color: rgb(197, 112, 138);
+    width: 150px;
+    height: 2rem;
+    color: white;
+    font-weight: 600;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.491);
+    transition: 500ms;
+    cursor: pointer;
+}
+.btnsubscribe:hover{
+    transition: 500ms;
+    scale: 1.1;
+}
+.controllerScrollIcon{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+@keyframes scroll_1 {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(-0.6em); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(0.6em); }
+    100% { transform: translateY(0); }
+  }
+  
+  .scroll-icon__wheel-outer {
+    display: block;
+    position: absolute;
+    left: 45%;
+    top: .6em;
+    height: 2em;
+    width: .8em;
+    margin-left: -.2em;
+    border-radius: .4em;
+    overflow: hidden;
+    
+  }
+  
+  .scroll-icon__wheel-inner {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: rgb(197, 112, 138);;
+    animation: scroll_1 2.75s ease-in-out infinite;
+  }
+
+  .scroll-icon {
+    display: block;
+    position: relative;
+    height: 6em;
+    width: 3em;
+    border: .5em solid rgb(197, 112, 138);;
+    border-radius: 2em;
+    animation-name: fadeScroll;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+  }
+
+
+  /* CSS Section Explore */
+
+
+  @keyframes fadettOut {
+    0%{
+        scale: 0.5;    
+    }
+    50%{
+        scale: 1;    
+    }
+
+  }
+
+  .exploreOne{
+    position: absolute;
+    top: 150vh;
+    width: 100vw;
+    height: 550px;
+    animation-name: fadettOut ;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 100%;
+    background-color: blueviolet;
+
+  }
+  .exploreTwo{
+    position: absolute;
+    top: 200vh;
+    width: 100vw;
+    height: 550px;
+    background-color: rgb(43, 226, 89);
+  }
