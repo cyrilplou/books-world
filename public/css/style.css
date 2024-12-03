@@ -2,6 +2,7 @@
 body{
     margin: 0px 0px;
     width: auto;
+    
 }
 
  /* CSS DU HEADER */
@@ -35,52 +36,22 @@ header nav ul a:hover{
 
 /* CSS de la HomePage */
 
-.containerFiches{
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.fiche{
-    width: 200px;
-    height: 500px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 3rem 2rem;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    border: solid 1.5px rgb(52, 132, 46);
-    background-color: antiquewhite;
-    overflow-y: hidden;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
-
-}
-.fiche img{
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
-}
-.description{
-    font-size: 1rem;
-    max-height: 200px;
-    overflow: hidden;
-    text-align: justify;
-    font-weight: 400;
-}
 .main{
     height: 100vh;
+    width: 100%;
     display: flex;
     overflow: hidden;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    background-image: url('/images/librairie_vierge.png');
+    /* background-image: url('/images/librairie_vierge.png');
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     background-color: rgb(255, 249, 240);
 }
+
 
 .main form{
     display: flex;
@@ -101,43 +72,40 @@ button{
     border-radius: 10px;
     border: solid 1px black;
 }
-.titleLibrairy{
-    position: absolute;
-    text-align: center;
-    height: 3rem;
-    left: 400px;
-    top: 140px;
+.imgLibrairie{
+    width: 60%;
+    display: flex;
+    justify-content: center;
 }
-
-.titleLibrairy h2{
-    font-size: 3em;
-    color: white;
-    filter: drop-shadow(-3px 3px black);
-    transform: perspective(2cm) rotateX(4deg) rotateY(2deg) rotateZ(4deg);
-
+.imgLibrairie img{
+    width: 100%;
+    max-width: 1000px;
 }
 .accroche{
     display: flex;
+    width: 40%;
+    margin-right: 3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-top: 8rem;
-    margin-left: 50rem;
 
 }
-.accroche h3{
-    color:rgb(81, 154, 138);
-    font-size: 2.5rem;
-    text-align: center;
-}
-.accroche h4{
-    font-size: 2rem;
+
+.accroche h1{
+    font-size: 1.7rem;
     text-align: center;
     color: rgb(81, 154, 138);
     margin-top: 1rem;
-    line-height: 65%;
-    
+    line-height: 100%;  
+}
+.accroche h4{
+    font-size: 1.7rem;
+    text-align: center;
+    color: rgb(81, 154, 138);
+    margin-top: 1rem;
+    line-height: 70%;  
 }
 @keyframes fadeScroll {
     0%{opacity: 1;}
@@ -177,8 +145,18 @@ button{
     transition: 500ms;
     scale: 1.1;
 }
+.btnHome{
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 .controllerScrollIcon{
-    margin-top: 8rem;
+    margin-top: 4rem;
+    width: 100px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,10 +176,10 @@ button{
     position: absolute;
     left: 45%;
     top: .6em;
-    height: 2em;
-    width: .8em;
+    height: 1em;
+    width: .4em;
     margin-left: -.2em;
-    border-radius: .4em;
+    border-radius: .2em;
     overflow: hidden;
     
   }
@@ -218,45 +196,47 @@ button{
   .scroll-icon {
     display: block;
     position: relative;
-    height: 6em;
-    width: 3em;
-    border: .5em solid rgb(197, 112, 138);;
-    border-radius: 2em;
+    height: 3em;
+    width: 1.5em;
+    border: .25em solid rgb(197, 112, 138);;
+    border-radius: 1em;
     animation-name: fadeScroll;
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
   }
 
 
-  /* CSS Section Explore */
+/* Fiches */
+  .containerFiches{
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.fiche{
+    width: 200px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: solid 1.5px rgb(52, 132, 46);
+    background-color: antiquewhite;
+    overflow-y: hidden;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
 
-  @keyframes fadettOut {
-    0%{
-        scale: 0.5;    
-    }
-    50%{
-        scale: 1;    
-    }
-
-  }
-
-  .exploreOne{
-    position: absolute;
-    top: 150vh;
-    width: 100vw;
-    height: 550px;
-    animation-name: fadettOut ;
-    animation-timeline: view();
-    animation-range-start: cover 0%;
-    animation-range-end: contain 100%;
-    background-color: blueviolet;
-
-  }
-  .exploreTwo{
-    position: absolute;
-    top: 200vh;
-    width: 100vw;
-    height: 550px;
-    background-color: rgb(43, 226, 89);
-  }
+}
+.fiche img{
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
+}
+.description{
+    font-size: 1rem;
+    max-height: 200px;
+    overflow: hidden;
+    text-align: justify;
+    font-weight: 400;
+}

@@ -6,28 +6,27 @@ export const booksController = {
         
                
                 // Je définis ma requête.
-                const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=chattam+maxime&langRestrict=fr`;
-                // &orderBy=newest
+                // const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=chattam+maxime&langRestrict=fr`;
+                // // &orderBy=newest
         
-                // Je lance ma requête vers Google Books API
-                const response = await axios.get(apiUrl);
+                // // Je lance ma requête vers Google Books API
+                // const response = await axios.get(apiUrl);
             
-                // Récupération des données.
-                const results = response.data.items;
-                // Les informations intéressantes se trouvent dans un objet volumeInfo du tableau Books. Mes informations utiles pour la suite après .volumeInfo    :
-                // ID google du livre (c'est ce qui sera stocker dans la BDD lorsqu'un utilisateur ajoute un livre à sa librairie).
-                // -> Titre : .title STRING
-                // -> Auteur : .author STRING
-                // -> date de publication : .publishedDate STRING 
-                // -> ISBN : industryIdentifieres[0].identifier STRING
-                // -> genre : .categories Array
-                // -> image de couv : .imageLinks.thumbnail STRING
+                // // Récupération des données.
+                // const results = response.data.items;
+                // // Les informations intéressantes se trouvent dans un objet volumeInfo du tableau Books. Mes informations utiles pour la suite après .volumeInfo    :
+                // // ID google du livre (c'est ce qui sera stocker dans la BDD lorsqu'un utilisateur ajoute un livre à sa librairie).
+                // // -> Titre : .title STRING
+                // // -> Auteur : .author STRING
+                // // -> date de publication : .publishedDate STRING 
+                // // -> ISBN : industryIdentifieres[0].identifier STRING
+                // // -> genre : .categories Array
+                // // -> image de couv : .imageLinks.thumbnail STRING
         
-                const books = results.filter((book)=>book.volumeInfo.imageLinks !== undefined)
+                // const books = results.filter((book)=>book.volumeInfo.imageLinks !== undefined)
         
-                // J'envoie ma page ainsi que le résultat de ma requête.
-                res.render('home', {books})
-                console.log(books)
+                // // J'envoie ma page ainsi que le résultat de ma requête.
+                res.render('home')
         
             },
 
