@@ -2,7 +2,6 @@
 body{
     margin: 0px 0px;
     width: auto;
-    
 }
 
  /* CSS DU HEADER */
@@ -36,7 +35,6 @@ header nav ul a:hover{
 
 /* CSS de la HomePage */
 
-
 .main{
     height: 100vh;
     width: 100%;
@@ -51,27 +49,6 @@ header nav ul a:hover{
     background-repeat: no-repeat; */
     background-color: rgb(255, 249, 240);
 }
-
-
-.main form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 50rem;
-    gap: 1rem;
-}
-.main form input {
-    width: 200px;
-    height: 2rem;
-    border-radius: 10px;
-    border: solid 1px black;
-}
-button{
-    width: 100px;
-    height: 1.5rem;
-    border-radius: 10px;
-    border: solid 1px black;
-}
 .imgLibrairie{
     width: 60%;
     display: flex;
@@ -79,7 +56,7 @@ button{
 }
 .imgLibrairie img{
     width: 100%;
-    max-width: 1000px;
+    /* max-width: 1000px; */
 }
 .accroche{
     display: flex;
@@ -90,9 +67,7 @@ button{
     align-items: center;
     gap: 1rem;
     margin-top: 8rem;
-
 }
-
 .accroche h1{
     font-size: 1.7rem;
     text-align: center;
@@ -117,6 +92,7 @@ button{
     background-color: rgb(81, 154, 138);
     width: 150px;
     height: 2rem;
+    border-radius: 10px;
     color: white;
     font-weight: 600;
     border: none;
@@ -137,6 +113,7 @@ button{
     color: white;
     font-weight: 600;
     border: none;
+    border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.491);
     transition: 500ms;
     cursor: pointer;
@@ -155,8 +132,7 @@ button{
 }
 .controllerScrollIcon{
     margin-top: 4rem;
-    width: 100px;
-
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,8 +153,8 @@ button{
     left: 45%;
     top: .6em;
     height: 1em;
-    width: .4em;
-    margin-left: -.2em;
+    width: .3em;
+    margin-left: -.1em;
     border-radius: .2em;
     overflow: hidden;
     
@@ -204,39 +180,3 @@ button{
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
   }
-
-
-/* Fiches */
-  .containerFiches{
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.fiche{
-    width: 200px;
-    height: 500px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 3rem 2rem;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    border: solid 1.5px rgb(52, 132, 46);
-    background-color: antiquewhite;
-    overflow-y: hidden;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
-
-}
-.fiche img{
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.598));
-}
-.description{
-    font-size: 1rem;
-    max-height: 200px;
-    overflow: hidden;
-    text-align: justify;
-    font-weight: 400;
-}
