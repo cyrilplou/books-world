@@ -77,5 +77,11 @@ export const booksController = {
 
     },
 
-
+        async librairie(req,res){
+            
+                   
+                
+                    res.render('librairie')
+            
+    },
 }
