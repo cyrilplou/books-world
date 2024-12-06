@@ -85,7 +85,7 @@ body{
     left: 23%;
     box-shadow: 0px 2px 2px black;
     z-index: 3;
-    border-right: solid 3px rgb(224, 220, 175);
+    border-right: ridge 3px rgb(224, 220, 175);
 }
 .coeur2{
     position: absolute;
@@ -93,7 +93,7 @@ body{
     bottom: 42%;
     left: 36%;
     box-shadow: 0px 2px 2px black;
-    border-right: solid 3px rgb(224, 220, 175);
+    border-right: ridge 3px rgb(224, 220, 175);
 }
 .coeur3{
     position: absolute;
@@ -101,7 +101,7 @@ body{
     bottom: 40%;
     left: 48%;
     box-shadow: 0px 2px 2px black;
-    border-right: solid 3px rgb(224, 220, 175);
+    border-right: ridge 3px rgb(224, 220, 175);
 }
 .quatre {
     /* background-color: rgba(242, 255, 0, 0.582); */
@@ -116,10 +116,38 @@ body{
 .cinq {
     /* background-color: rgba(0, 234, 255, 0.573); */
     width: 28.91%;
+    position: relative;
+
 }
-.cinq img{
+.cinq-bg{
     width: 100%;
     cursor: pointer;
 
     /* display: none; */
+}
+
+
+
+
+/* CSS pour les livres présentation qui se situe sur l'étage tout à droite. Section 5 */
+
+.presentation1{
+    position: absolute;
+    width: 20%;
+    bottom: 27%;
+    right: 20%;
+    transform: rotateX(0deg) rotateY(65deg)rotateZ(10deg);
+    border-right: ridge 20px rgb(169, 151, 119);
+    /* border-top: groove 6px rgb(169, 151, 119); */
+
+}
+.presentation2{
+    position: absolute;
+    width: 23%;
+    bottom: 24%;
+    right: 2%;
+    transform: rotateX(0deg) rotateY(65deg)rotateZ(10deg);
+    border-right: ridge 20px rgb(169, 151, 119);
+    /* border-top: groove 6px rgb(169, 151, 119); */
+
 }
