@@ -1,11 +1,13 @@
 import axios from "axios";
+import { userDatamapper } from "../dataMapper/user.datamapper.js";
 
 export const booksController = {
 
     async homeBooks(req,res){
         
-               
-                // Je définis ma requête.
+               console.log(req.session.id)
+
+             // Je définis ma requête.
                 // const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=chattam+maxime&langRestrict=fr`;
                 // // &orderBy=newest
         
@@ -79,7 +81,7 @@ export const booksController = {
 
         async librairie(req,res){
             
-                   
+
                 
                     res.render('librairie')
             
