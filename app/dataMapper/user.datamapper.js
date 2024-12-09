@@ -6,7 +6,7 @@ export const userDatamapper = {
     const query = "SELECT * FROM users WHERE id = $1";
     const value = [id];
     const result = await database.query(query,value);
-    return result.rows
+    return result.rows[0]
     
     }
 }

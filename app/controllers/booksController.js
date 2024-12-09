@@ -5,8 +5,6 @@ export const booksController = {
 
     async homeBooks(req,res){
         
-               console.log(req.session.id)
-
              // Je définis ma requête.
                 // const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=chattam+maxime&langRestrict=fr`;
                 // // &orderBy=newest
@@ -81,9 +79,11 @@ export const booksController = {
 
         async librairie(req,res){
             
+            const userInfo = await userDatamapper.findOneUser(1)
+            req.session.data = userInfo
 
-                
-                    res.render('librairie')
+            console.log(req.session.data.firstname)
+                    res.render('librairie',{userInfo})
             
     },
 }
