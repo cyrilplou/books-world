@@ -12,10 +12,17 @@
                         <p>Pas d'image disponible</p>
                         <% } %>
             <h2 class="titre"><%= books[i].volumeInfo.title %></h1>
-            <p class="auteur"><%= books[i].volumeInfo.author%></p>
+            <p class="auteur"><%= books[i].volumeInfo.authors%></p>
             <h2 class="description"><%= books[i].volumeInfo.description %></h2>
             <p class="auteur"><%= books[i].volumeInfo.categories%></p>
-
+            <form action="/favoriteBook" method="post">
+                <input type="text" hidden name="titre" id="titre" value="<%= books[i].volumeInfo.title %>">
+                <input type="text" hidden name="auteur" id="auteur" value="<%= books[i].volumeInfo.authors %>">
+                <input type="text" hidden name="description" id="description" value="<%= books[i].volumeInfo.description %>">
+                <input type="text" hidden name="image" id="image" value="<%= books[i].volumeInfo.imageLinks.thumbnail %>">
+                <input type="text" hidden name="google_id" id="google_id" value="<%= books[i].id %>">
+                <button type="submit">Ajouter à mes favoris</button>
+            </form>
 
           
                 </div>

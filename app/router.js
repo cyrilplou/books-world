@@ -11,7 +11,10 @@ router.use((req, res, next) => {
 
 router.get('/',  booksController.homeBooks)
 
+router.get('/allbooks',  (req,res)=>{res.render('allbooks')})
+
 router.get('/search', booksController.findBook)
+
 
 router.get('/librairie', isMemberMiddleware.loggedUser,  booksController.librairie)
 
@@ -20,3 +23,5 @@ router.get('/login', (req,res)=>{res.render('login')})
 router.get('/logout', authController.logout)
 
 router.post('/loginUser', authController.loginUser)
+
+router.post('/favoriteBook',isMemberMiddleware.loggedUser, booksController.addFavoriteBook )
