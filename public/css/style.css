@@ -180,3 +180,16 @@ header nav ul a:hover{
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
   }
+
+  /* Login Page CSS */
+
+  .formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }

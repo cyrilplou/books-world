@@ -8,5 +8,13 @@ export const userDatamapper = {
     const result = await database.query(query,value);
     return result.rows[0]
     
-    }
+    },
+    async findOneUserMail (mail){
+
+      const query = "SELECT * FROM users WHERE email = $1";
+      const value = [mail];
+      const result = await database.query(query,value);
+      return result.rows[0]
+      
+      },
 }

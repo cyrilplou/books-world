@@ -19,7 +19,6 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false }
-  
 }))
 // Configurer l'app
 app.use(router);

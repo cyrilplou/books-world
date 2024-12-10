@@ -13,7 +13,13 @@
                 <a href="/">Accueil</a>
                 <a href="/librairie">Librairie</a>
                 <a href="/about">A propos</a>
+                <%  if(user === null) {%>
                 <a href="/login">Se connecter/S'inscrire</a>
+                <% } %>
+                <% if(user) { %>
+                    <a href=""><p>Bonjour <%= user.firstname %></p></a>
+                    <a href="/logout">Se déconnecter</a>
+                <% } %>
             </ul>
 
         </nav>
