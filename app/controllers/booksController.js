@@ -78,15 +78,6 @@ export const booksController = {
 
     },
 
-        async librairie(req,res){
-            
-            
-            
-            console.log(req.session.user.firstname)
-
-                    res.render('librairie')
-            
-    },
    async addFavoriteBook(req,res){
         const data = req.body
         const userID = res.locals.user.id

@@ -7,3 +7,7 @@ boutonBG.addEventListener('click', ()=>{
         console.log('coucou')
     librairieSection.style.backgroundImage = "url(/images/bg.png)";
 })
+
+
+
+

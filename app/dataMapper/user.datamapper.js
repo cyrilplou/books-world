@@ -32,4 +32,13 @@ export const userDatamapper = {
         console.log(result)
         },
 
+     async findAllBookOneUser (user_id){
+
+      const query = "SELECT * FROM library JOIN user ON library.user_id = user.id WHERE user.id = $1";
+            const value = [mail];
+      const result = await database.query(query,value);
+      return result.rows[0]
+      
+      }, 
+
 }
